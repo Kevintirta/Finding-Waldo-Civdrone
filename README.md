@@ -6,6 +6,9 @@
   <img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/found_waldo_image.png" width="410" height="250">
 </p>
 <br>
+<br>
+<br>
+<br>
 <p align="center">
   <strong>Purpose of the project:</strong>
   To find Waldo in the pool of people.
