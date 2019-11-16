@@ -1,15 +1,7 @@
 # Finding-Waldo-Civdrone
 
-<p float="left">
-  <img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/raw_image.png" width="410" height="250">
 
-  <img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/found_waldo_image.png" width="410" height="250">
-</p>
-<br>
-<br>
-<br>
-<br>
-<p align="bottom">
+<p align="left">
   <strong>Purpose of the project:</strong>
   To find Waldo in the pool of people.
 
@@ -20,4 +12,10 @@
   1. Computer Vision method being used in the project is Template Matching which is a high level to identify part of input image that match the given image pattern, in this case, we managed to find Waldo in the input raw image using the technique.
   2. GUI being used in the project is tkinter.
 
+</p>
+
+<p float="left">
+  <img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/raw_image.png" width="410" height="250">
+
+  <img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/found_waldo_image.png" width="410" height="250">
 </p>
