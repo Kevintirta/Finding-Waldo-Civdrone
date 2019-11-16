@@ -9,7 +9,7 @@
 <br>
 <br>
 <br>
-<p align="center">
+<p align="bottom">
   <strong>Purpose of the project:</strong>
   To find Waldo in the pool of people.
 
