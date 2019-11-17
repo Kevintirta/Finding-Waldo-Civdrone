@@ -55,37 +55,67 @@ def back(image_number):
     button_back.grid(row=0,column = 1)
     button_forward.grid(row=0,column = 3)
 
+def mark_person(loc,person):
+    """
+    function to mark the target person location in the image
+
+    :param
+        loc: represents the location of the target person
+        person: the person name
+
+    :return
+        number of occurences target found in the image
+    """
+    count = 0
+    for pt in zip(*loc[::-1]):
+        count += 1
+        cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,255,0), 2)
+        cv2.putText(img_rgb,person, pt, cv2.FONT_HERSHEY_SIMPLEX, 0.5,(0,255,0),2)
+    return count
+
+def show_exist(count,person):
+    """
+    function to print in the console whether the target person is found or not
+
+    :param
+        count: number of occurences the person found
+        person: the person name
+    """
+    if (count <= 0):
+        print('{} is not found in the Image'.format(person))
+    else:
+        print('{} is found in the Image'.format(person))
 
 root = Tk()
 root.title('Finding Waldo')
 
 img_rgb = cv2.imread('wheres-waldo-2.jpg')
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
-template = cv2.imread('waldo.png',0)
+template_waldo = cv2.imread('waldo.png',0)
+template_wenda = cv2.imread('wenda.png',0)
 
 #saves the width and height of the template into 'w' and 'h'
-w, h = template.shape[::-1]
+w, h = template_waldo.shape[::-1]
 
-res = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
+res_waldo = cv2.matchTemplate(img_gray,template_waldo,cv2.TM_CCOEFF_NORMED)
+res_wenda = cv2.matchTemplate(img_gray,template_wenda,cv2.TM_CCOEFF_NORMED)
 threshold = 0.7
 
 # finding the values where it exceeds the threshold
-count = 0
-loc = np.where(res >= threshold)
-for pt in zip(*loc[::-1]):
-    #draw rectangle on places where it exceeds threshold
-    count += 1
-    cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,255,0), 2)
+loc_waldo = np.where(res_waldo >= threshold)
+loc_wenda = np.where(res_wenda >= threshold)
 
-# print out in the console whether waldo is found or not
-if (count <= 0):
-    print('Waldo is not found in the Image')
-else:
-    print('Waldo is found in the Image')
+# mark location of target person as well as count the number of occurences target found
+count_waldo=mark_person(loc_waldo,'waldo')
+count_wenda=mark_person(loc_wenda,'wenda')
 
-cv2.imwrite('found_waldo.png',img_rgb)
+# print out in the console whether target person is found or not
+show_exist(count_waldo,'waldo')
+show_exist(count_wenda,'waldo')
 
-image_list = ['wheres-waldo-2.jpg', 'found_waldo.png']
+cv2.imwrite('found_image.png',img_rgb)
+
+image_list = ['wheres-waldo-2.jpg', 'found_image.png']
 
 my_label = MainWindow(root,path='wheres-waldo-2.jpg')
 my_label.grid(row=0,column=0,columnspan=4, rowspan=2)
