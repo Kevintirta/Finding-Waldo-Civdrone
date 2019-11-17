@@ -14,6 +14,12 @@
 
 </p>
 
+<strong>How to run the project:</strong>
+1. Make sure the finding_waldo.py, waldo.png, and wheres-waldo-2.jpg located in the same directory
+2. Run the finding_waldo.py to find waldo in the raw data
+3. A statement will be printed in the console to show whether waldo is found or not
+4. A tkinter GUI will be shown, the first image being the raw image, and second image being the resulted image.
+
 <p float="left">
   <img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/raw_image.png" width="410" height="250">
 
