@@ -4,14 +4,15 @@ import numpy as np
 import image
 import os
 import time
+import sys
 from tkinter import *
 from PIL import ImageTk,Image
 from zoom_advance import MainWindow
+from tkinter import messagebox
 
 def forward(image_number):
     """
     function to go to the next page
-
     :param
         image_number: represents the image sequence (first image, second,image, etc)
     """
@@ -35,7 +36,6 @@ def forward(image_number):
 def back(image_number):
     """
     function to go to the previous image
-
     :param
         image_number: represents the image sequence (first image, second,image, etc)
     """
@@ -58,11 +58,9 @@ def back(image_number):
 def mark_person(loc,person):
     """
     function to mark the target person location in the image
-
     :param
         loc: represents the location of the target person
         person: the person name
-
     :return
         number of occurences target found in the image
     """
@@ -76,7 +74,6 @@ def mark_person(loc,person):
 def show_exist(count,person):
     """
     function to print in the console whether the target person is found or not
-
     :param
         count: number of occurences the person found
         person: the person name
@@ -86,8 +83,26 @@ def show_exist(count,person):
     else:
         print('{} is found in the Image'.format(person))
 
-root = Tk()
-root.title('Finding Waldo')
+def alert_input(file):
+    """
+    function to alert user if input file is not located in the directory
+    :param
+        file: input file name
+        person: the person name
+    """
+    if os.path.isfile(file) == False:
+        # hide tkinter box
+        top = Tk()
+        top.withdraw()
+        messagebox.showwarning("Alert", "Input '{}' file does not exist. \n\nPlease make sure the input file in the same directory.".format(file))
+        sys.exit()
+
+if os.path.isfile('waldo.png') and os.path.isfile('wenda.png') == True:
+    root = Tk()
+    root.title("Finding Waldo Program")
+else:
+    alert_input('waldo.png')
+    alert_input('wenda.png')
 
 img_rgb = cv2.imread('wheres-waldo-2.jpg')
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
