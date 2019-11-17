@@ -12,16 +12,19 @@ The image shown on the left represents the raw image while the image on the righ
 1. Computer Vision method being used in the project is Template Matching which is a high level to identify part of input image that match the given image pattern, in this case, we managed to find Waldo in the input raw image using the TM_CCOEFF_NORMED formula, one of template matching operation.
 2. GUI being used in the project is tkinter.
 
-
-
 <strong>How to run the project:</strong>
-1. Make sure the finding_waldo.py, waldo.png, and wheres-waldo-2.jpg located in the same directory
+1. Make sure the finding_waldo.py, waldo.png, wenda.png, and wheres-waldo-2.jpg located in the same directory
 2. Run the finding_waldo.py to find waldo in the raw data
 3. A statement will be printed in the console to show whether waldo is found or not
 4. A tkinter GUI will be shown, the first image being the raw image, and second image being the resulted image.
 
-<p float="left">
-  <img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/raw_image.png" width="410" height="250">
+<strong>Enhancement:</strong><br/>
+The script is also able to find Wenda who is Waldo's girlfriend
 
-  <img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/found_waldo_image.png" width="410" height="250">
-</p>
+<strong>Picture 1. Raw Image</strong>
+<img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/raw_image.png" width="410" height="250">
+<strong>Picture 2. Found Waldo Image</strong>
+<img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/found_waldo_image.png" width="410" height="250">
+<strong>Picture 3. Found Wenda Image</strong>
+<img align="left" src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/found_wenda_image.png" width="410" height="250">
+
