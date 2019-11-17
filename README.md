@@ -30,3 +30,4 @@ The script is also able to find Wenda who is Waldo's girlfriend
 <strong>Picture 3. Found Wenda Image</strong><br/>
 <img src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/found_wenda_image.png" width="600" height="450">
 
+
