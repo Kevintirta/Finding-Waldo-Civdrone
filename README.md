@@ -20,11 +20,11 @@ The image shown on the left represents the raw image while the image on the righ
 
 <strong>Enhancement:</strong><br/>
 The script is also able to find Wenda who is Waldo's girlfriend
-
-<strong>Picture 1. Raw Image</strong>
+<br/>
+<strong>Picture 1. Raw Image</strong><br/>
 <img src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/raw_image.png" width="410" height="250">
-<strong>Picture 2. Found Waldo Image</strong>
+<strong>Picture 2. Found Waldo Image</strong><br/>
 <img src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/found_waldo_image.png" width="410" height="250">
-<strong>Picture 3. Found Wenda Image</strong>
+<strong>Picture 3. Found Wenda Image</strong><br/>
 <img src="https://github.com/Kevintirta/Finding-Waldo-Civdrone/blob/master/found_wenda_image.png" width="410" height="250">
 
