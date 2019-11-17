@@ -1,7 +1,7 @@
 # Finding-Waldo-Civdrone
 
 
-<p align="left">
+
   <strong>Purpose of the project:</strong>
   To find Waldo in the pool of people.
 
@@ -12,7 +12,7 @@
   1. Computer Vision method being used in the project is Template Matching which is a high level to identify part of input image that match the given image pattern, in this case, we managed to find Waldo in the input raw image using the TM_CCOEFF_NORMED formula, one of template matching operation.
   2. GUI being used in the project is tkinter.
 
-</p>
+
 
 <strong>How to run the project:</strong>
 1. Make sure the finding_waldo.py, waldo.png, and wheres-waldo-2.jpg located in the same directory
